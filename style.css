@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+body {
+  background-color: #fafafa;
+}
+
+.dark body {
+  background-color: #09090b;
+}
+
+
+/* Hero Background */
+.hero-bg {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+              url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/79623543957639.58036287df740.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+/* ==================== PRODUCT CARD - FIXED ==================== */
+.product-card {
+  background: white !important;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .product-card {
+  background: #18181b !important;     /* zinc-900 */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+}
+
+.product-card h3 {
+  color: #1f2937;
+}
+
+.dark .product-card h3 {
+  color: #f4f4f5;
+}
+
+.product-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.08);
+}
+
+
+
+/* Navbar underline effect */
+/* Navbar Links */
+.nav-link {
+  color: #374151;
+}
+
+.dark .nav-link {
+  color: #d1d5db;
+}
+
+.nav-link:hover {
+  color: #111827;
+}
+
+.dark .nav-link:hover {
+  color: #ffffff;
+}
+
+/* Navbar Icons */
+nav button {
+  color: #374151;
+}
+
+.dark nav button {
+  color: #d1d5db;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #d4af37;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover:after { 
+  width: 100%; 
+}
+
+/* Modal Animation */
+.modal {
+  animation: modalPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Modal Inputs & Text Fix */
+#auth-modal input {
+  color: #18181b;
+}
+
+.dark #auth-modal input {
+  color: #f4f4f5;
+}
+
+/* Modal Background & Text */
+#auth-modal .bg-white {
+  background-color: #ffffff;
+}
+
+.dark #auth-modal .bg-white {
+  background-color: #18181b;
+}
+
+@keyframes modalPop {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Utility */
+.max-w-7xl {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ====================== DARK MODE ====================== */
+.dark body {
+  background-color: #09090b;
+}
+
+.dark .bg-zinc-50 {
+  background-color: #09090b;
+}
+
+.dark .text-zinc-800 {
+  color: #e4e4e7;
+}
+
+.dark .text-zinc-900 {
+  color: #fafafa;
+}
+
+.dark .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.4) !important;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ====================== CART SIDEBAR ====================== */
+#cart-sidebar {
+  transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+#cart-sidebar.open {
+  transform: translateX(0) !important;
+}
+
+.cart-item {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.dark #cart-sidebar {
+  background-color: #a6a6a6;
+  color: #000000;
+}
+
+.dark .cart-item {
+  border-bottom: 1px solid #3f3f46;
+}
+
+.dark .cart-item {
+  border-bottom: 1px solid #374151;
+}
+
+.quantity-btn {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.dark .quantity-btn {
+  background: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
